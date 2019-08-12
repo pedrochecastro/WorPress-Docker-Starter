@@ -1,0 +1,32 @@
+version: "3.5"
+services:
+  php-apache:
+    build:
+      context: '.'
+      dockerfile: 'Dockerfile'
+    ports:
+    - "8080:80"
+    volumes:
+    - .:/var/www/html
+    container_name: wordpress
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql:5.7
+    ports:
+    - 3306:3306
+    restart: always
+    volumes:
+     - ./wp/:/var/www/html/wp
+     - .data:/var/lib/mysql
+     - ./sql/backup.sql:/docker-entrypoint-initdb.d/backup.sql
+    environment:
+      MYSQL_ROOT_USER: "root"
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "wordpress_db"
+      MYSQL_USER: "admin"
+      MYSQL_PASSWORD: "dbpass"
+    container_name: wordpress-db
+networks:
+  default:
+    name: wordpress_net
