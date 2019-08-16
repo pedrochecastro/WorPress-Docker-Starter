@@ -1,4 +1,7 @@
-# Wordpress Dorcker Starter
+# Wordpress Docker Starter
+
+
+![version](https://img.shields.io/badge/devops-Docker-blue.svg?maxAge=2592000)
 
 ## Folder Structure
 
