@@ -1,7 +1,7 @@
 # Wordpress Docker Starter
 
 
-![version](https://img.shields.io/badge/devops-Docker-blue.svg?maxAge=2592000)
+![version](https://img.shields.io/badge/DevOps-Docker-blue.svg?maxAge=2592000)
 
 ## Folder Structure
 
@@ -17,7 +17,7 @@
 ```
 
 
-## Install wordpress
+## Install Wordpress with Browser
 
 ```
 docker-compose up -d
