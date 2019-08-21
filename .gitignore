@@ -1,3 +1,4 @@
 .data/
 sql/*
-!wp/wp-config.php
+wp/*
+!sql/info.txt

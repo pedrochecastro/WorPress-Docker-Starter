@@ -17,19 +17,27 @@
 ```
 
 
-## Install Wordpress by Browser
+## Installing Wordpress
+
+### Browser assistant
 
 1. Up environment
 
 ```
 docker-compose up -d
 ```
+2. Download a wordpress fresh installation a copy all file in wp directory
 
-2. Open browser:
+3. Open browser:
 
 ![Wordpress Installer](https://drive.google.com/uc?id=1B4uxR0MiSru4m1anIcIp_UU1oaeh3w-0)
 
-## Install Wordpress by WP-CLI
+4. Complete installation.
+> You can set up database connection in docker-compose
+
+> Database host is the container name where the database is running: wordpress-db
+
+### ## WP-CLI
 
 1. Up environment
 
