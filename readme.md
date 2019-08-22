@@ -26,7 +26,8 @@
 ```
 docker-compose up -d
 ```
-2. Download a wordpress fresh installation a copy all file in wp directory
+2. Download a wordpress fresh installation a copy all files in wp directory:
+![Copy wordpress files](https://drive.google.com/uc?id=1nvHYmrc2sGgcNJwO6XoVyJJNzPwebVjJ)
 
 3. Open browser:
 
@@ -37,7 +38,9 @@ docker-compose up -d
 
 > Database host is the container name where the database is running: wordpress-db
 
-### ## WP-CLI
+![Wordpress db setup](https://drive.google.com/uc?id=1nvbgqps2L_SqkXSG0aMM-PvI4z7QFYub)
+
+### WP-CLI
 
 1. Up environment
 
