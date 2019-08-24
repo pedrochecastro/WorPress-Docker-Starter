@@ -7,7 +7,7 @@ services:
     ports:
     - "8080:80"
     volumes:
-    - .:/var/www/html
+    - ./wp:/var/www/html/wp
     container_name: wordpress
     depends_on:
       - mysql
@@ -17,7 +17,7 @@ services:
     - 3306:3306
     restart: always
     volumes:
-     - ./wp/:/var/www/html/wp
+     - ./wp:/var/www/html/wp
      - .data:/var/lib/mysql
      - ./sql/backup.sql:/docker-entrypoint-initdb.d/backup.sql
     environment:

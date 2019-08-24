@@ -62,6 +62,7 @@ docker run --rm -v $PWD:/var/www/html --user xfs --network wordpress_net wordpre
 
 ```
 docker run --rm -v $PWD:/var/www/html --user xfs --network wordpress_net wordpress:cli wp core install --url=localhost:8080 --title="Wordpress is Ready\!" --admin_user=root --admin_password=root --admin_email=info@myemail.com
+```
 
 
 ## Create database backup
