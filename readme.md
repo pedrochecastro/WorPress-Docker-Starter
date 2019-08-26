@@ -49,19 +49,19 @@ docker-compose up -d
 
 2. Download wordpress
 ```
-docker run --rm -v $PWD:/var/www/html --user xfs  --network wordpress_net wordpress:cli wp core download --path=wp
+docker run --rm -v $PWD/wp:/var/www/html/wp --user xfs  --network wordpress_net wordpress:cli wp core download --path=wp
 ```
 
 3. Create  wp-config file
 
 ```
-docker run --rm -v $PWD:/var/www/html --user xfs --network wordpress_net wordpress:cli --rm wp config create --dbname=wordpress_db --dbuser=admin --dbpass=dbpass --dbhost=wordpress-db --path=wp
+docker run --rm -v $PWD/wp:/var/www/html/wp --user xfs --network wordpress_net wordpress:cli wp config create --dbname=wordpress_db --dbuser=admin --dbpass=dbpass --dbhost=wordpress-db --path=wp
 ```
 
 4. Install wordpress.
 
 ```
-docker run --rm -v $PWD:/var/www/html --user xfs --network wordpress_net wordpress:cli wp core install --url=localhost:8080 --title="Wordpress is Ready\!" --admin_user=root --admin_password=root --admin_email=info@myemail.com
+docker run --rm -v $PWD/wp:/var/www/html/wp --user xfs --network wordpress_net wordpress:cli wp core install --url=localhost:8080 --title="Wordpress is Ready\!" --admin_user=root --admin_password=root --admin_email=info@myemail.com --path=wp
 ```
 
 
