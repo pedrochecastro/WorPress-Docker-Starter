@@ -86,4 +86,25 @@ volumes:
 docker-compose up -d
 ```
 
+## Backup version control
+
+keep your commits and database synchronize
+
+ 1. Export db to backupV2 
+ ```
+    docker exec wordpress /usr/bin/mysqldump -u root --password=root wordpress_db > backupV2.sql
+ ```
+
+ 2. Merge backup backupV2 > backup
+ ```
+    git merge-file sql/backup.sql sql/backup.sql sql/backupV2.sql
+ ```
+
+ 3. Delete backupV2.sql
+ ```
+    rm sql/backupV2.sql
+ ```
+
+ Now you can commit and keep a version of backup at that point.
+
 
