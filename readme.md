@@ -107,4 +107,12 @@ keep your commits and database synchronize
 
  Now you can commit and keep a version of backup at that point.
 
+ ## Install Plugin: Akismet example
+
+- Activate plugin
+
+```
+docker run --rm -v $PWD:/var/www/html --user xfs --network wordpress_net wordpress:cli --rm wp plugin install --activate akismet --path=./w
+```
+
 
