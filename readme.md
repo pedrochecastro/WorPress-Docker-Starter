@@ -115,4 +115,10 @@ keep your commits and database synchronize
 docker run --rm -v $PWD:/var/www/html --user xfs --network wordpress_net wordpress:cli --rm wp plugin install --activate akismet --path=./w
 ```
 
+## References and Comments
+
+- [Docker official documentation](https://docs.docker.com)
+- [WP CLI doc](https://wp-cli.org/)
+
+
 
