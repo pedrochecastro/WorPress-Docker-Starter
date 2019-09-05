@@ -115,6 +115,12 @@ keep your commits and database synchronize
 docker run --rm -v $PWD:/var/www/html --user xfs --network wordpress_net wordpress:cli --rm wp plugin install --activate akismet --path=./w
 ```
 
+## Delete plugins Akismet and Hello example
+
+```
+docker run --rm -v $PWD:/var/www/html --user xfs --network wordpress_net wordpress:cli wp uninstall akismet hello
+```
+
 ## References and Comments
 
 - [Docker official documentation](https://docs.docker.com)
